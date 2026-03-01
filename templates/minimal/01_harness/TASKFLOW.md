@@ -10,6 +10,13 @@ Use this loop every time:
 
 Only one active spec at a time.
 
+## First session only
+
+If context files are still empty or stubs, run `initial-context-building` instead of Distill.
+It reads broader sources and fills all context slots in one pass.
+
+> Load: `shared/skills/initial-context-building/SKILL.md`
+
 ## Distill prompt (copy/paste)
 
 ```text

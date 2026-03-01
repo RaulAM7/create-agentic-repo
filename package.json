@@ -1,6 +1,6 @@
 {
   "name": "create-agentic-repo",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Scaffold context-lean Agentic Repo Harness v2 workspaces.",
   "license": "MIT",
   "author": "",
