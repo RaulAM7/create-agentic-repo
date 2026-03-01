@@ -1,0 +1,33 @@
+{
+  "name": "create-agentic-repo",
+  "version": "0.1.0",
+  "description": "Scaffold context-lean Agentic Repo Harness v2 workspaces.",
+  "license": "MIT",
+  "author": "",
+  "type": "commonjs",
+  "main": "lib/cli.js",
+  "bin": {
+    "create-agentic-repo": "bin/create-agentic-repo.js"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "templates",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "smoke": "node scripts/smoke-test.js",
+    "test": "npm run smoke"
+  },
+  "keywords": [
+    "agentic",
+    "scaffold",
+    "cli",
+    "harness",
+    "spec-driven"
+  ]
+}
