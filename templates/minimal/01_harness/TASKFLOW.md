@@ -1,58 +1,42 @@
 # TASKFLOW
 
-Use this loop every time:
+Phases to follow in order. Complete each phase before moving to the next.
 
-1. Seed
-2. Distill
-3. Spec
-4. Ship
-5. QA
+## 1. Seed
 
-Only one active spec at a time.
+Drop all raw material (docs, links, notes) into `00_inbox/`.
 
-## First session only
+## 2. Distill
 
-If context files are still empty or stubs, run `initial-context-building` instead of Distill.
-It reads broader sources and fills all context slots in one pass.
+Read `00_inbox/` and populate `02_context/`:
+- `BRIEF.md` — what this project is and why
+- `FACTS.md` — verified facts and data points
+- `CONSTRAINTS.md` — hard limits and non-negotiables
+- `GLOSSARY.md` — domain terms
+- `LINKS.md` — reference URLs
 
-> Load: `shared/skills/initial-context-building/SKILL.md`
+Use skill: `shared/skills/distill-context/`
 
-## Distill prompt (copy/paste)
+## 3. Spec
 
-```text
-Read 00_inbox/ and distill only what is needed into:
-- 02_context/BRIEF.md
-- 02_context/FACTS.md
-- 02_context/CONSTRAINTS.md
-- 02_context/LINKS.md
-- 02_context/GLOSSARY.md (if needed)
+Create one execution-ready spec in `03_specs/now/`.
+- Define objective, scope, acceptance criteria
+- Park future items in `03_specs/backlog.md`
 
-Rules:
-- keep total context readable in 5 minutes
-- separate facts from assumptions
-- mark unknowns explicitly
-- do not move raw dumps into 02_context
-```
+Use skill: `shared/skills/write-spec/`
 
-## Write spec prompt (copy/paste)
+## 4. Ship
 
-```text
-Using 02_context, create one active spec in 03_specs/now/001_now.md with:
-- Outcome
-- Scope / No-scope
-- Inputs
-- Deliverable path and format
-- Acceptance criteria checklist
-- Risks / edge cases
-- Open questions (max 8)
+Execute the active spec. Write deliverables to `04_outputs/`.
+Use `05_scratch/` for working files.
 
-Keep it execution-ready and concise.
-```
+Use skill: `shared/skills/ship-output/`
 
-## QA gate checklist
+## 5. QA
 
-- [ ] Deliverable exists in `04_outputs/`
-- [ ] Acceptance criteria all checked
-- [ ] Unknowns listed
-- [ ] Risks noted with mitigation
-- [ ] Next action is clear
+Before closing, run the QA gate:
+- Verify each acceptance criterion
+- List unresolved unknowns
+- State risks and next steps
+
+Use skill: `shared/skills/qa-review/`
